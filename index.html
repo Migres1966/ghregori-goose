@@ -240,7 +240,7 @@
     canvas.height = Math.round(rect.height*dpr);
     ctx.setTransform(dpr,0,0,dpr,0,0);
     const cw=rect.width, ch=rect.height;
-    scale = Math.max(cw/W,ch/H);
+    scale = Math.min(cw/W,ch/H);
     ox=(cw-W*scale)/2; oy=(ch-H*scale)/2;
   }
   addEventListener('resize',resize);
